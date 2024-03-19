@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="display-4 text-center"> Livros S/A</h1>
+    <h3> Cadastro de Livros</h3>   
+    <form #formBook = "ngForm">
+         <div class="row">
+            <label for="titulo">Titulo: </label>
+            <div>
+                <input type="text" class= "form-control" [(ngModel)]="book.name" id="titulo" name="titulo" required>
+            </div>
+            <label for="autor">Autor: </label>
+            <div>
+                <input type="text" class= "form-control" [(ngModel)]="book.author"  id="autor" name="autor" required>
+            </div>      
+        </div>
+        <div class="row">
+            <div>
+                <button class="btn btn-primary mt-3" [disabled]="formBook.invalid" (click)="save()"> Salvar</button>
+            </div>    
+        </div>
+    </form>
+   
+</div>
